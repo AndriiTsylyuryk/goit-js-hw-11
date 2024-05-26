@@ -17,11 +17,11 @@ function imageTemp(image){
         alt="${image.tags}" 
       />
     </a>
-    <div class="img-details-box">
-      <p class="detail-item"><b class="detail-title">Likes:</b> ${image.likes}</p>
-      <p class="detail-item"><b class="detail-title">Views:</b> ${image.views}</p>
-      <p class="detail-item"><b class="detail-title">Comments:</b> ${image.comments}</p>
-      <p class="detail-item"><b class="detail-title">Downloads:</b> ${image.downloads}</p>
+    <div class="img-info-box">
+      <p class="detail-text"><b class="detail-title">Likes</b> ${image.likes}</p>
+      <p class="detail-text"><b class="detail-title">Views</b> ${image.views}</p>
+      <p class="detail-text"><b class="detail-title">Comments</b> ${image.comments}</p>
+      <p class="detail-text"><b class="detail-title">Downloads</b> ${image.downloads}</p>
     </div>
     </li>
     `

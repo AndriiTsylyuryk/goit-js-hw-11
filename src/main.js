@@ -7,9 +7,9 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('.search');
-// const input = document.querySelector('.input');
 const container = document.querySelector('.pictures');
 const loader = document.querySelector('.loader');
+console.log(loader)
 
 form.addEventListener('submit', handleSubmit);
 
@@ -17,7 +17,7 @@ function handleSubmit(event) {
   event.preventDefault();
   container.innerHTML = '';
 
-  const query = event.target.elements.field.value.trim();
+  const query = event.target.elements.query.value.trim();
 
   if (!query) {
     iziToast.error({
@@ -29,7 +29,7 @@ function handleSubmit(event) {
     return;
   }
 
-  showLoader();
+showLoader();
 
   getImages(query)
     .then(data => {
@@ -57,7 +57,7 @@ function handleSubmit(event) {
 
 
 function showLoader() {
-  loader.style.display = 'inline-block';
+  loader.style.display = 'block';
 }
 
 function hideLoader() {
